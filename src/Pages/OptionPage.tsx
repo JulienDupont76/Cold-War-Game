@@ -10,7 +10,7 @@ export const optionPage = (setCurrentMode: (mode: number) => void) => {
         <div className='back'>
             <div className='bg'></div>
             <div className='container'>
-                <div id='text'>ez win</div>
+                <div id='text'>settings</div>
                 <div id='option-buttons' className='btn-grid'>
                     <button className='btn'>Option 1</button>
                     <button className='btn'>Option 2</button>
