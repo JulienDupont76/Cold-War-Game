@@ -1,5 +1,3 @@
-import { selectOptions } from '../utils/main';
-
 type ButtonProps = {
 	text: string | undefined;
 	options: [];
@@ -8,8 +6,6 @@ type ButtonProps = {
 
 const Button = (props: ButtonProps) => {
 	const { text, options, handleOptionClick } = props;
-
-	let test = '';
 
 	return (
 		<div className='container'>

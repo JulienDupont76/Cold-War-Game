@@ -17,7 +17,6 @@ function App() {
 		const nextTextNodeIndex = selectOptions(option);
 		const { text: newText, options: newOptions } =
 			showTextNode(nextTextNodeIndex);
-		console.log(newOptions);
 		if (newText) setText(newText);
 		if (newOptions) setOptions(newOptions);
 	};
