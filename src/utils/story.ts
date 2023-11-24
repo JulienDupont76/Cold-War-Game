@@ -1,3 +1,12 @@
+import { GameState } from './main';
+
+export interface Option {
+	text: string;
+	requiredState?: (currentState: GameState) => boolean;
+	setState: { [key: string]: any };
+	nextText: number;
+}
+
 export const textNodes = [
 	{
 		id: 1,
@@ -13,7 +22,7 @@ export const textNodes = [
 				setState: { nation: 'USSR' },
 				nextText: 2,
 			},
-		],
+		] as Option[],
 	},
 	{
 		id: 2,
@@ -21,16 +30,18 @@ export const textNodes = [
 		options: [
 			{
 				text: 'Test 1',
-				requiredState: (currentState) => currentState.nation === 'USA',
+				requiredState: (currentState: GameState) =>
+					currentState.nation === 'USA',
 				setState: { test: true },
 				nextText: 3,
 			},
 			{
 				text: 'Test 2',
-				requiredState: (currentState) => currentState.nation === 'USSR',
+				requiredState: (currentState: GameState) =>
+					currentState.nation === 'USSR',
 				setState: { test: false },
 				nextText: 3,
 			},
-		],
+		] as Option[],
 	},
 ];
