@@ -4,10 +4,11 @@
 import { useEffect, useState } from 'react';
 import './USA.css';
 import Dialog from '../components/Dialog';
-import { selectOptions, showTextNode } from '../utils/main';
+import { selectOptions, showTextNode } from '../utils/USA/main';
 import { Link } from 'react-router-dom';
 import Settings from '../components/Settings';
-import { Option } from '../utils/story';
+import { Option } from '../utils/USA/story';
+import ProgressBar from '../components/ProgressBar';
 
 export const USA = () => {
 	const [text, setText] = useState<string | undefined>('Test');
@@ -42,6 +43,7 @@ export const USA = () => {
 				<i className='ri-home-2-line'></i>
 			</Link>
 			<Settings />
+			<ProgressBar />
 		</div>
 	);
 };

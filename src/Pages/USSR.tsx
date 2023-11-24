@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Dialog from '../components/Dialog';
-import { selectOptions, showTextNode } from '../utils/main';
+import { selectOptions, showTextNode } from '../utils/USSR/main';
 import { Link } from 'react-router-dom';
 import Settings from '../components/Settings';
-import { Option } from '../utils/story';
+import { Option } from '../utils/USA/story';
 
 export const USSR = () => {
 	const [text, setText] = useState<string | undefined>('Test');

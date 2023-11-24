@@ -1,6 +1,7 @@
 import { GameState } from './main';
 
 export interface Option {
+	id: number;
 	text: string;
 	requiredState?: (currentState: GameState) => boolean;
 	setState: { [key: string]: any };
@@ -10,14 +11,16 @@ export interface Option {
 export const textNodes = [
 	{
 		id: 1,
-		text: 'Which nation do you want to play',
+		text: 'Test test test',
 		options: [
 			{
+				id: 1,
 				text: 'United States of America',
 				setState: { nation: 'USA' },
 				nextText: 2,
 			},
 			{
+				id: 2,
 				text: 'USSR',
 				setState: { nation: 'USSR' },
 				nextText: 2,
@@ -29,6 +32,7 @@ export const textNodes = [
 		text: 'Next decision',
 		options: [
 			{
+				id: 1,
 				text: 'Test 1',
 				requiredState: (currentState: GameState) =>
 					currentState.nation === 'USA',
@@ -36,6 +40,7 @@ export const textNodes = [
 				nextText: 3,
 			},
 			{
+				id: 2,
 				text: 'Test 2',
 				requiredState: (currentState: GameState) =>
 					currentState.nation === 'USSR',

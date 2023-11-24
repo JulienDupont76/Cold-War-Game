@@ -9,10 +9,14 @@ export const HomePage = () => {
 		<div className='w-screen h-screen flex flex-col justify-start items-center gap-24 py-20'>
 			<div className='text-4xl sm:text-6xl text-white'>Cold War Game</div>
 			<div className='w-9/12 text-base sm:text-xl text-white'>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus
-				iure perspiciatis tempora illo, dolores dolorem labore cumque deserunt
-				fugit aspernatur ullam totam eos quia ipsa reiciendis pariatur provident
-				est odio.
+				Step into the shoes of a leader during the Cold War era and shape the
+				destiny of your nation in this thrilling, strategic game. Will you guide
+				the United States or the USSR through the tumultuous years of the Cold
+				War? Make critical decisions in science, military power, economy,
+				culture, and popularity, as you strive to outmaneuver your opponent and
+				lead your nation to victory. The fate of the world is in your hands.
+				Choose wisely and prove that you have what it takes to dominate the Cold
+				War era. Are you ready to rewrite history?
 			</div>
 			<div className='text-base sm:text-xl text-white'>
 				Select the nation you want to play :
