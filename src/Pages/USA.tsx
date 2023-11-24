@@ -7,10 +7,11 @@ import Dialog from '../components/Dialog';
 import { selectOptions, showTextNode } from '../utils/main';
 import { Link } from 'react-router-dom';
 import Settings from '../components/Settings';
+import { Option } from '../utils/story';
 
 export const USA = () => {
 	const [text, setText] = useState<string | undefined>('Test');
-	const [options, setOptions] = useState([]);
+	const [options, setOptions] = useState<Option[]>([]);
 
 	useEffect(() => {
 		const { text: newText, options: newOptions } = showTextNode(1);
@@ -18,7 +19,7 @@ export const USA = () => {
 		if (newOptions) setOptions(newOptions);
 	}, []);
 
-	const handleOptionClick = (option) => {
+	const handleOptionClick = (option: Option) => {
 		const nextTextNodeIndex = selectOptions(option);
 		const { text: newText, options: newOptions } =
 			showTextNode(nextTextNodeIndex);
