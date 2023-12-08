@@ -11,18 +11,28 @@ export interface Option {
 export const textNodes = [
 	{
 		id: 1,
-		text: 'Congratulations! You have been elected to lead the United States of America, a nation at the forefront of global affairs during the Cold War.',
+		text: 'Congratulations! You have been elected to lead the United States of America, a leading nation in world affairs during the Cold War.',
 		options: [
 			{
 				id: 1,
 				text: 'Embrace the responsibility and begin your journey as the leader of the free world.',
-				setState: { nation: 'USA' },
+				setState: {
+					nation: 'USA',
+					military: 10,
+					science: 10,
+					economy: -40,
+				},
 				nextText: 2,
 			},
 			{
 				id: 2,
 				text: 'Decline the offer. The weight of leading a superpower is too much to bear.',
-				setState: { nation: 'neutral' },
+				setState: {
+					nation: 'neutral',
+					military: -20,
+					science: -30,
+					economy: 35,
+				},
 				nextText: 2,
 			},
 		] as Option[],
@@ -36,7 +46,7 @@ export const textNodes = [
 				text: 'Prioritize advancements in science and technology to strengthen the nation.',
 				requiredState: (currentState: GameState) =>
 					currentState.nation === 'USA',
-				setState: { science: true },
+				setState: { science: 40 },
 				nextText: 3,
 			},
 			{
@@ -44,7 +54,7 @@ export const textNodes = [
 				text: 'Focus on building a powerful military to ensure national security.',
 				requiredState: (currentState: GameState) =>
 					currentState.nation === 'USA',
-				setState: { military: true },
+				setState: { military: 40 },
 				nextText: 3,
 			},
 			{
@@ -52,7 +62,7 @@ export const textNodes = [
 				text: 'Strengthen the economy to enhance the prosperity of the American people.',
 				requiredState: (currentState: GameState) =>
 					currentState.nation === 'USA',
-				setState: { economy: true },
+				setState: { economy: 40 },
 				nextText: 3,
 			},
 		] as Option[],

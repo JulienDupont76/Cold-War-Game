@@ -1,10 +1,13 @@
 // create home page with play button
 //
 
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css';
+import { resetGameState } from '../utils/USA/main';
 
 export const HomePage = () => {
+	useEffect(() => resetGameState(), []);
+
 	return (
 		<div className='w-screen h-screen flex flex-col justify-start items-center gap-24 py-20'>
 			<div className='text-4xl sm:text-6xl text-white'>Cold War Game</div>

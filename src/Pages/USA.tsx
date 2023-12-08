@@ -2,30 +2,46 @@
 //
 
 import { useEffect, useState } from 'react';
-import './USA.css';
 import Dialog from '../components/Dialog';
-import { selectOptions, showTextNode } from '../utils/USA/main';
+import { GameState, selectOptions, showTextNode } from '../utils/USA/main';
 import { Link } from 'react-router-dom';
 import Settings from '../components/Settings';
 import { Option } from '../utils/USA/story';
-import ProgressBar from '../components/ProgressBar';
+import Progress from '../components/Progress';
 
 export const USA = () => {
 	const [text, setText] = useState<string | undefined>('Test');
 	const [options, setOptions] = useState<Option[]>([]);
+	const [gameState, setGameState] = useState<GameState>({
+		military: 50,
+		science: 50,
+		economy: 50,
+	});
 
 	useEffect(() => {
-		const { text: newText, options: newOptions } = showTextNode(1);
+		const {
+			text: newText,
+			options: newOptions,
+			Gamestate: newState,
+		} = showTextNode(1);
 		if (newText) setText(newText);
 		if (newOptions) setOptions(newOptions);
+		console.log(gameState);
+		console.log(newState);
+		//if (newState) setGameState(newState);
 	}, []);
 
 	const handleOptionClick = (option: Option) => {
 		const nextTextNodeIndex = selectOptions(option);
-		const { text: newText, options: newOptions } =
-			showTextNode(nextTextNodeIndex);
+		const {
+			text: newText,
+			options: newOptions,
+			Gamestate: newState,
+		} = showTextNode(nextTextNodeIndex);
 		if (newText) setText(newText);
 		if (newOptions) setOptions(newOptions);
+		console.log(newState);
+		if (newState) setGameState(newState);
 	};
 
 	return (
@@ -43,7 +59,7 @@ export const USA = () => {
 				<i className='ri-home-2-line'></i>
 			</Link>
 			<Settings />
-			<ProgressBar />
+			<Progress state={gameState} />
 		</div>
 	);
 };
