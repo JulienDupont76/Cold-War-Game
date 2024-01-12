@@ -1,5 +1,5 @@
 import TypeWriter from './TypeWriter';
-import { Option } from '../utils/story';
+import { Option } from '../utils/USA/story';
 
 type DialogProps = {
 	text: string | undefined;
@@ -14,10 +14,10 @@ const Dialog = (props: DialogProps) => {
 		<div className='container'>
 			<TypeWriter text={text} delay={80} />
 			<div id='option-buttons' className='btn-grid'>
-				{options.map((option, index) => (
+				{options.map((option) => (
 					<button
 						className='btn'
-						key={index}
+						key={option.id}
 						onClick={() => handleOptionClick(option)}
 					>
 						{option.text}
