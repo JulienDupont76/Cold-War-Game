@@ -34,14 +34,14 @@ export const HomePage = () => {
 					<img
 						src='/Cold-War-Game/USA_flag.png'
 						alt='USA Flag'
-						className='h-20 xl:h-80 lg:h-48 md:h-48 sm:h-32 transition duration-300 transform hover:scale-110 hover:shadow-2xl'
+						className='h-20 2xl:h-80 xl:h-64 lg:h-48 md:h-48 sm:h-32 transition duration-300 transform hover:scale-110 hover:shadow-2xl'
 					/>
 				</Link>
 				<Link to='/Cold-War-Game/USSR'>
 					<img
 						src='/Cold-War-Game/USSR_flag.png'
 						alt='USSR Flag'
-						className='h-20 xl:h-80 lg:h-48 md:h-48 sm:h-32 transition duration-300 transform hover:scale-110 hover:shadow-2xl'
+						className='h-20 2xl:h-80 xl:h-64 lg:h-48 md:h-48 sm:h-32 transition duration-300 transform hover:scale-110 hover:shadow-2xl'
 					/>
 				</Link>
 			</div>
