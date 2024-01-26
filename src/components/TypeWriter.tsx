@@ -30,6 +30,14 @@ const TypeWriter = (props: TypeWriterProps) => {
 		setCurrentIndex(0);
 	}, [text]);
 
-	return <div>{currentText}</div>;
+	const lines = currentText.split('\n');
+
+	return (
+		<div>
+			{lines.map((line, index) => (
+				<div key={index}>{line}</div>
+			))}
+		</div>
+	);
 };
 export default TypeWriter;

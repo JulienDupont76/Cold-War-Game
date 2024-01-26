@@ -161,8 +161,39 @@ export const textNodes = [
 				nextText: 11,
 				setState: { economy: 10, culture: -10 },
 			},
+			{
+				id: 3,
+				text: "We'll remain neutral and focus on resolving our internal issues.",
+				nextText: 11,
+				setState: { economy: 5, culture: 5 },
+			},
 		] as Option[],
 	},
+	{
+		id: 11,
+		text: 'The decision to support North Korea resonates through the chambers of the Kremlin. As the leader of the USSR, you see this as an opportunity to expand communist influence and counter American power in Asia. You authorize sending military equipment, advisors, and support to North Korea.',
+		options: [
+			{
+				id: 1,
+				text: 'Next',
+				setState: { military: -10, economy: -10, culture: 5 },
+				nextText: 12,
+			},
+		] as Option[],
+	},
+	{
+		id: 12,
+		text: 'The decision to support North Korea resonates through the chambers of the Kremlin. As the leader of the USSR, you see this as an opportunity to expand communist influence and counter American power in Asia. You authorize sending military equipment, advisors, and support to North Korea.',
+		options: [
+			{
+				id: 1,
+				text: 'Next',
+				setState: { military: -10, economy: -10, culture: 5 },
+				nextText: 13,
+			},
+		] as Option[],
+	},
+
 	{
 		id: 11,
 		text: '1955: Mr. President, a new opportunity has presented itself for us to embark on a groundbreaking space project. How would you like to proceed?',

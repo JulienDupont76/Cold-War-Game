@@ -30,7 +30,7 @@ export const USA = () => {
 		} = showTextNode(1);
 		if (newText) setText(newText);
 		if (newOptions) setOptions(newOptions);
-		//if (newState) setGameState(newState);
+		if (newState) setGameState(newState);
 	}, []);
 
 	const handleOptionClick = (option: Option) => {
