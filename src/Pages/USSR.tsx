@@ -27,7 +27,7 @@ export const Ussr = () => {
 		} = showTextNode(1);
 		if (newText) setText(newText);
 		if (newOptions) setOptions(newOptions);
-		console.log(newState);
+		if (newState) setGameState(newState);
 	}, []);
 
 	const handleOptionClick = (option: Option) => {
