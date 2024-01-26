@@ -42,7 +42,7 @@ const Dialog = (props: DialogProps) => {
 		<div className='container'>
 			<TypeWriter
 				text={text}
-				delay={1}
+				delay={80}
 				onComplete={() => setShowAnswers(true)}
 			/>
 			{showAnswers &&
