@@ -9,7 +9,7 @@ export const HomePage = () => {
 	useEffect(() => resetGameState(), []);
 
 	return (
-		<div className='w-screen flex flex-col justify-start items-center gap-24 py-20'>
+		<div className='w-screen flex flex-col justify-start items-center gap-6 py-20'>
 			<div className='flex flex-col items-center'>
 				<div className='text-4xl sm:text-7xl text-white'>Cold War Game</div>
 				<p className='my-2 text-xs sm:text-sm text-center text-white'>
