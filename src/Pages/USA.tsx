@@ -10,7 +10,7 @@ import { Option } from '../utils/USA/story';
 import Progress from '../components/Progress';
 import * as DialogRadix from '@radix-ui/react-dialog';
 
-export const USA = () => {
+export const Usa = () => {
 	const [text, setText] = useState<string | undefined>('');
 	const [defeated, setDefeated] = useState<boolean>(false);
 	const [win, setWin] = useState<boolean>(false);
@@ -70,13 +70,13 @@ export const USA = () => {
 				handleOptionClick={handleOptionClick}
 			/>
 			<Link
-				to='/'
+				to='/Cold-War-Game'
 				className='fixed bottom-8 left-8 inline-flex h-14 border border-white/10 bg-white/50 items-center rounded-full px-5 gap-2 hover:bg-white hover:text-black transition-colors duration-200 outline-none'
 			>
 				<i className='ri-home-2-line'></i>
 			</Link>
 			<Settings />
-			<Progress state={gameState} />(
+			<Progress state={gameState} />
 			<DialogRadix.Root open={defeated}>
 				<DialogRadix.Overlay className='w-screen h-screen bg-black/80 backdrop-blur fixed top-0 left-0' />
 				<DialogRadix.Content className='fixed top-1/2 left-1/2 !-translate-x-1/2 !-translate-y-1/2 w-[500px] outline-none flex flex-col justify-between items-center gap-4'>
@@ -88,7 +88,7 @@ export const USA = () => {
 						save your nation, your people, and the world.
 					</p>
 					<Link
-						to='/'
+						to='/Cold-War-Game'
 						className='shadow-black hover:bg-blue-300 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none'
 					>
 						Retry
@@ -108,16 +108,15 @@ export const USA = () => {
 						nation, your people, and the world.
 					</p>
 					<Link
-						to='/'
+						to='/Cold-War-Game'
 						className='shadow-black hover:bg-green-300 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none'
 					>
 						Continue
 					</Link>
 				</DialogRadix.Content>
 			</DialogRadix.Root>
-			)
 		</div>
 	);
 };
 
-export default USA;
+export default Usa;

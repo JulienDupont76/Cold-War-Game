@@ -7,7 +7,7 @@ import { Option } from '../utils/USA/story';
 import Progress from '../components/Progress';
 import * as DialogRadix from '@radix-ui/react-dialog';
 
-export const USSR = () => {
+export const Ussr = () => {
 	const [text, setText] = useState<string | undefined>('');
 	const [defeated, setDefeated] = useState<boolean>(false);
 	const [win, setWin] = useState<boolean>(false);
@@ -67,7 +67,7 @@ export const USSR = () => {
 				handleOptionClick={handleOptionClick}
 			/>
 			<Link
-				to='/'
+				to='/Cold-War-Game'
 				className='fixed bottom-8 left-8 inline-flex h-14 border border-white/10 bg-white/50 items-center rounded-full px-5 gap-2 hover:bg-white hover:text-black transition-colors duration-200 outline-none'
 			>
 				<i className='ri-home-2-line'></i>
@@ -85,7 +85,7 @@ export const USSR = () => {
 						save your nation, your people, and the world.
 					</p>
 					<Link
-						to='/'
+						to='/Cold-War-Game'
 						className='shadow-black hover:bg-blue-300 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none'
 					>
 						Retry
@@ -105,7 +105,7 @@ export const USSR = () => {
 						nation, your people, and the world.
 					</p>
 					<Link
-						to='/'
+						to='/Cold-War-Game'
 						className='shadow-black hover:bg-green-300 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none'
 					>
 						Continue
@@ -116,4 +116,4 @@ export const USSR = () => {
 	);
 };
 
-export default USSR;
+export default Ussr;

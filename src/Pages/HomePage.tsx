@@ -30,14 +30,14 @@ export const HomePage = () => {
 				Select the nation you want to play :
 			</div>
 			<div className='w-full h-full flex justify-around items-center'>
-				<Link to='/USA'>
+				<Link to='/Cold-War-Game/USA'>
 					<img
 						src='/USA_flag.png'
 						alt='USA Flag'
 						className='h-20 xl:h-80 lg:h-48 md:h-48 sm:h-32 transition duration-300 transform hover:scale-110 hover:shadow-2xl'
 					/>
 				</Link>
-				<Link to='/USSR'>
+				<Link to='/Cold-War-Game/USSR'>
 					<img
 						src='/USSR_flag.png'
 						alt='USSR Flag'
