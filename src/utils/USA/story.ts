@@ -128,7 +128,7 @@ export const textNodes = [
 			{
 				id: 1,
 				text: 'Let’s develop a better one (H Bomb)',
-				setState: { science: 100, military: 15, economy: -10, culture: -15 },
+				setState: { science: 15, military: 15, economy: -10, culture: -15 },
 				nextText: 10,
 			},
 			{
