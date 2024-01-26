@@ -50,7 +50,10 @@ const Dialog = (props: DialogProps) => {
 					<div id='option-buttons' className='btn-flex'>
 						<button
 							className='btn'
-							onClick={() => handleOptionClick(options[0])}
+							onClick={() => {
+								handleOptionClick(options[0]);
+								setShowAnswers(false);
+							}}
 						>
 							{options[0].text}
 						</button>
@@ -61,7 +64,10 @@ const Dialog = (props: DialogProps) => {
 							<button
 								className='btn'
 								key={option.id}
-								onClick={() => handleOptionClick(option)}
+								onClick={() => {
+									handleOptionClick(option);
+									setShowAnswers(false);
+								}}
 							>
 								{option.text}
 							</button>
