@@ -10,7 +10,12 @@ export const HomePage = () => {
 
 	return (
 		<div className='w-screen h-screen flex flex-col justify-start items-center gap-24 py-20'>
-			<div className='text-4xl sm:text-6xl text-white'>Cold War Game</div>
+			<div className='flex flex-col items-center'>
+				<div className='text-4xl sm:text-7xl text-white'>Cold War Game</div>
+				<p className='my-2 text-xs sm:text-sm text-center text-white'>
+					created by Léo Blancher, Julien Dupont, Viet Hung Nguyen
+				</p>
+			</div>
 			<div className='w-9/12 text-base sm:text-xl text-white'>
 				Step into the shoes of a leader during the Cold War era and shape the
 				destiny of your nation in this thrilling, strategic game. Will you guide

@@ -65,7 +65,7 @@ const Progress = (props: PropsProgres) => {
 						fill='rgba(147,51,234,1)'
 					></path>
 				</svg>
-				<ProgressBar color='bg-purple-600' value={state.economy} />
+				<ProgressBar color='bg-purple-600' value={state.culture} />
 			</div>
 		</div>
 	);

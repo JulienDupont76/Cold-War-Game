@@ -3,10 +3,11 @@ import { useEffect, useState } from 'react';
 type TypeWriterProps = {
 	text?: string;
 	delay: number;
+	onComplete?: () => void;
 };
 
 const TypeWriter = (props: TypeWriterProps) => {
-	const { text, delay } = props;
+	const { text, delay, onComplete } = props;
 
 	const [currentText, setCurrentText] = useState<string>('');
 	const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -19,8 +20,10 @@ const TypeWriter = (props: TypeWriterProps) => {
 			}, delay);
 
 			return () => clearTimeout(timeout);
+		} else if (onComplete) {
+			onComplete();
 		}
-	}, [currentIndex, delay, text]);
+	}, [currentIndex, delay, text, onComplete]);
 
 	useEffect(() => {
 		setCurrentText('');

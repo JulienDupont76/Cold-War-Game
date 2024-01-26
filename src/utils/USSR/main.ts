@@ -5,9 +5,10 @@ export interface GameState {
 	military: number;
 	science: number;
 	economy: number;
+	culture: number;
 }
 
-let state: GameState = { military: 50, science: 50, economy: 50 };
+let state: GameState = { military: 50, science: 50, economy: 50, culture: 50 };
 
 export const showTextNode = (textNodeIndex: number) => {
 	const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
@@ -25,15 +26,19 @@ export const selectOptions = (option: Option) => {
 	const nextTextNodeId = option.nextText;
 	const updatedMilitary = Math.min(
 		100,
-		Math.max(0, state.military + (option.setState.military || 0))
+		Math.max(0, state.military + (option.setState?.military || 0))
 	);
 	const updatedScience = Math.min(
 		100,
-		Math.max(0, state.science + (option.setState.science || 0))
+		Math.max(0, state.science + (option.setState?.science || 0))
 	);
 	const updatedEconomy = Math.min(
 		100,
-		Math.max(0, state.economy + (option.setState.economy || 0))
+		Math.max(0, state.economy + (option.setState?.economy || 0))
+	);
+	const updatedCulture = Math.min(
+		100,
+		Math.max(0, state.culture + (option.setState?.culture || 0))
 	);
 
 	state = {
@@ -42,10 +47,11 @@ export const selectOptions = (option: Option) => {
 		military: updatedMilitary,
 		science: updatedScience,
 		economy: updatedEconomy,
+		culture: updatedCulture,
 	};
 	return nextTextNodeId;
 };
 
 export const resetGameState = () => {
-	state = { military: 50, science: 50, economy: 50 };
+	state = { military: 50, science: 50, economy: 50, culture: 50 };
 };
