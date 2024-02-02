@@ -13,7 +13,7 @@ export const HomePage = () => {
 			<div className='flex flex-col items-center'>
 				<div className='text-4xl sm:text-7xl text-white'>Cold War Game</div>
 				<p className='my-2 text-xs sm:text-sm text-center text-white'>
-					created by Léo Blancher, Julien Dupont, Viet Hung Nguyen
+					created by Léo Blancher, Julien Dupont, Viet Hung Nguyen for Game Lab 2023-2024
 				</p>
 			</div>
 			<div className='w-9/12 text-base sm:text-xl text-white'>
